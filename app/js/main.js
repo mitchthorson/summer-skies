@@ -5,7 +5,8 @@ var _ = require('lodash');
 var $gradient,
 $document,
 ctx,
-canvas;
+canvas,
+secondaryHues = ['orange', 'red', 'pink'];
 
 function init() {
     $document = jQuery(document);
@@ -13,12 +14,24 @@ function init() {
     canvas = document.getElementById("c");
     ctx = canvas.getContext("2d");
     var numBars = getNumBars(8);
-    var colors = randomColor({hue: 'blue', count: 2});
+    var colors = [randomColor({hue: 'blue', luminosity: 'light'}), randomColor({hue: getSecondaryColor, luminosity: 'light'})];
+    console.log(colors);
     renderGradient(colors);
 }
 
 function getNumBars(maxNum) {
     return Math.ceil(Math.random() * maxNum)
+}
+
+function getSecondaryColor() {
+    var blueOrOtherTest = Math.round(Math.random() * 1);
+    if (blueOrOtherTest == 0) {
+        return 'blue';
+    } else {
+        var maxIndex = secondaryHues.length - 1;
+        var randomIndex = (Math.round(Math.random() * maxIndex));
+        return secondaryHues[randomIndex];
+    }
 }
 
 function renderGradient(colorArray) {
