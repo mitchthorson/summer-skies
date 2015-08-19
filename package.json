@@ -32,8 +32,12 @@
     "gulp-watch": "^4.1.1",
     "lodash": "^3.5.0",
     "merge-stream": "^0.1.7",
+    "node-static": "^0.7.7",
     "nunjucks": "^1.3.4",
+    "phantom": "^0.7.2",
+    "phantomjs": "^1.9.18",
     "pretty-hrtime": "~0.2.1",
+    "random-color": "0.0.1",
     "require-dir": "^0.3.0",
     "vinyl-source-stream": "~0.1.1",
     "webpack": "^1.7.3"
