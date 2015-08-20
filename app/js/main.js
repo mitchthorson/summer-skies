@@ -14,7 +14,7 @@ function init() {
     canvas = document.getElementById("c");
     ctx = canvas.getContext("2d");
     var numBars = getNumBars(8);
-    var colors = [randomColor({hue: 'blue', luminosity: 'light'}), randomColor({hue: getSecondaryColor, luminosity: 'light'})];
+    var colors = [randomColor({hue: 'blue', luminosity: 'light'}), randomColor({hue: getSecondaryColor(), luminosity: 'light'})];
     console.log(colors);
     renderGradient(colors);
 }
