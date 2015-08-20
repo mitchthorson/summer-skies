@@ -1,35 +1,40 @@
-USAT-APP-KIT
+summmer skiesss
 ============
 
-# What this kit does
-- processes SASS into CSS
-- runs autoprefixer on CSS
-- bundles JS files via Webpack/Babel
-- generates static HTML from [Nunjucks templates](http://mozilla.github.io/nunjucks/)
-- runs a dev server with live reload
+# What is this?
+this is a little app that generates colorful, sky-like gradients, and saves them to .pngs
 
-# Getting Started
+created for for a for a print submission to a zine.
+
+# How does it work?
 
 ## Install dependencies
+
+this is primarily a nodejs-based app. It also depends on phantomjs.
+
+First run:
+
 ```
 npm install
 ```
 
-## Start gulp
+## Preview
+
+to preview the visualization, run:
 ```
 gulp
 ```
-You may need to alias `gulp` to `node_modules/.bin/gulp`, or `npm install -g gulp`.
 
-Start editing assets and views from the `gulp/assets` and `gulp/views` folder. Files compile to `public`.
+the code that generates the gradient lives in app/js/main.js
 
-## Preview production environment
+## Save files
+
+the phantomjs code that saves the files lives in save-images/read-image.js
+
+run
 ```
-gulp build:production
-gulp server
+node app.js
 ```
+to save files to save-images/output/
 
-
-## Inspired By
-https://github.com/texastribune/newsapps-app-kit, https://github.com/nprapps/app-template/, https://github.com/greypants/gulp-starter/tree/2.0, and https://github.com/wuaiwuai/gulp-webpack-template
 
